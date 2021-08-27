@@ -41,7 +41,7 @@ public class EventoController {
 		return 	eventoService.editarEvento(evento);		
 	}
 
-	@GetMapping("/borrarEvento/(idevento)")
+	@GetMapping("/borrarEvento/{idevento}")
 	public String borrarEvento(@PathVariable("idevento") int idevento) {		
 		return eventoService.borrarEvento(idevento);
 	}

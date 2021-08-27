@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.lang.StringUtils;
+import org.springframework.stereotype.Service;
 
 import com.microservicio.evento.DTO.EventoDTO;
 import com.microservicio.evento.DTO.RecintoDTO;
 import com.microservicio.evento.model.Evento;
 import com.microservicio.evento.model.Recinto;
 
+@Service
 public class EventoMapper {
 
 	public List<EventoDTO> listaEventoToListaEventoDTO (List<Evento> listaEvento){

@@ -8,4 +8,6 @@ import com.microservicio.evento.model.Evento;
 @Repository
 public interface EventoRepository extends MongoRepository<Evento, Integer>{
 
+	public int deleteByIdEvento(int idEvento);
+	public Evento getEventoByIdEvento(int idEvento);
 }

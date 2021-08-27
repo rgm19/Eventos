@@ -3,10 +3,13 @@ package com.microservicio.evento.model;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.springframework.data.annotation.Id;
+
 public class Evento implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	@Id
 	private int idEvento;
 	private String nombre;
 	private String descripCorta;

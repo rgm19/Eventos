@@ -22,7 +22,7 @@ public class EventoService implements IEventoService {
 	
 	@Override
 	public EventoDTO getEventoById(int idEvento) {
-		return mapper.eventoToEventoDTO(eventoRepository.findById(idEvento).orElse(null));
+		return mapper.eventoToEventoDTO(eventoRepository.getEventoByIdEvento(idEvento));
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class EventoService implements IEventoService {
 
 	@Override
 	public String borrarEvento(int idEvento) {
-		eventoRepository.delete(mapper.eventoDtoToEvento(getEventoById(idEvento)));		
+		eventoRepository.deleteByIdEvento(idEvento);		
 		return "Eliminado correctamente";
 	}
 

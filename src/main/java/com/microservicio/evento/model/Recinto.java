@@ -2,8 +2,11 @@ package com.microservicio.evento.model;
 
 import java.io.Serializable;
 
+import org.springframework.data.annotation.Id;
+
 public class Recinto implements Serializable{
 
+	@Id
 	private static final long serialVersionUID = 1L;
 	private int idRecinto;
 	private String nombre;
